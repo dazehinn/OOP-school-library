@@ -27,7 +27,7 @@ class Person < Nameable
   def of_age?
     @age >= 18
   end
-  
+
   def add_rental(rental)
     @rentals.push(rental)
     rental.person = self
