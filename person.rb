@@ -1,4 +1,5 @@
 require './nameable'
+require './rental'
 
 class Person < Nameable
   attr_reader :id
@@ -21,14 +22,14 @@ class Person < Nameable
     @name
   end
 
-  def add_rental(rental)
-    @rentals.push(rental)
-    rental.person = self
-  end
-
   private
 
   def of_age?
     @age >= 18
+  end
+  
+  def add_rental(rental)
+    @rentals.push(rental)
+    rental.person = self
   end
 end
